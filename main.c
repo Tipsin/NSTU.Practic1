@@ -1,4 +1,4 @@
-#include "practic1.h"
+#include "practic1.h" // Подключение заголовочного файла
 
 int main(void){
     e_book book1, book2; //  Объявление структур с именами book1 и book2
