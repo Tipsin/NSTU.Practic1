@@ -6,12 +6,12 @@ int main(void){
     err = init_e_book(&book1, "Samsung", 10, true);
     if (err != ERROR_SUCCESS){
         printf("Ошибка инициализации первой электронной книги, код ошибки: %d\n", err);
-        return 1;
+        return err;
     }
     err = init_e_book(&book2, "Lenovo", 6, false);
         if (err != ERROR_SUCCESS){
         printf("Ошибка инициализации второй электронной книги, код ошибки: %d\n", err);
-        return 1;
+        return err;
     }
     print_e_book(&book1);
     printf("\n");
@@ -21,7 +21,7 @@ int main(void){
     err = change_e_book(&book1, "PocetBook");
     if (err != ERROR_SUCCESS){
         printf("Ошибка изменения названия, код ошибки: %d\n", err);
-        return 1;
+        return err;
     }
     print_e_book(&book1);
     printf("\n");
@@ -33,12 +33,12 @@ int main(void){
     err = init_e_book(&d_e_book1, "ONYX", 12, true);
     if (err != ERROR_SUCCESS){
         printf("Ошибка инициализации первой электронной книги в динамической памяти, код ошибки: %d\n", err);
-        return 1;
+        return err;
     }
     err = init_e_book(&d_e_book2, "Amazon", 9, false);
         if (err != ERROR_SUCCESS){
         printf("Ошибка инициализации второй электронной книги в динамической памяти, код ошибки: %d\n", err);
-        return 1;
+        return err;
     }
     print_e_book(&d_e_book1);
     printf("\n");
@@ -48,7 +48,7 @@ int main(void){
     err = change_e_book(&d_e_book1, "Digma");
     if (err != ERROR_SUCCESS){
         printf("Ошибка изменения названия, код ошибки: %d\n", err);
-        return 1;
+        return err;
     }
     print_e_book(&d_e_book1);
     printf("\n");
